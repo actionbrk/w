@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Merriweather_Sans } from "next/font/google";
 import "./globals.css";
-
-const merriweatherSans = Merriweather_Sans({
-  variable: "--font-merriweather-sans",
-  subsets: ["latin"],
-});
+import { merriweatherSans } from "./fonts";
 
 export const metadata: Metadata = {
   title: "W",
