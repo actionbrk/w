@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@theme {
+  --color-lavender: #E7E7FF;
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;

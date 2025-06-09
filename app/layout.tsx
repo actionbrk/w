@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${merriweatherSans.className} antialiased`}
+        className={`${merriweatherSans.className} antialiased bg-lavender`}
       >
         {children}
       </body>
