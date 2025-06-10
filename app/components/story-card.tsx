@@ -7,7 +7,7 @@ export default function StoryCard() {
   return (
     <Link
       href="#"
-      className="relative rounded-[34px] w-[170px] h-[200px] overflow-hidden hover:scale-105 transition-transform"
+      className="relative rounded-[34px] w-[170px] h-[200px] overflow-hidden hover:scale-105 transition-transform shrink-0"
     >
       <Image
         src={imageUrl}

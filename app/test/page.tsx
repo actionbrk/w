@@ -44,8 +44,8 @@ export default function Page() {
           </div>
         </nav>
 
-        <div className="relative flex flex-col items-start justify-center min-h-screen pl-18">
-          <h1 className={`${canela.className} text-8xl font-bold text-white mb-8 p-2`}>
+        <div className="relative flex flex-col items-start justify-center min-h-screen px-18">
+          <h1 className={`${canela.className} text-7xl sm:text-8xl font-bold text-white mb-8 p-2`}>
             The W Project
           </h1>
           <p className="text-sm font-light text-white max-w-2xl p-2">
@@ -55,15 +55,14 @@ export default function Page() {
 
         {/* Superposition pour l'effet de fondu en bas */}
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-lavender via-lavender/70 to-transparent">
-          <div className="flex">
-            <div className="w-1/2"></div>
-            <div className="w-1/2 p-4">
+          <div className="flex flex-col sm:flex-row">
+            <div className="w-full sm:w-1/2"></div>
+            <div className="w-full sm:w-1/2 p-4">
               <h2 className="text-white text-2xl font-semibold flex items-center gap-4">
                 <BsStar />
                 <span>Most Popular</span>
               </h2>
-              <div className="flex gap-4 mt-8">
-                <StoryCard />
+              <div className="flex flex-wrap gap-4 mt-8">
                 <StoryCard />
                 <StoryCard />
                 <StoryCard />
@@ -74,8 +73,8 @@ export default function Page() {
       </div>
 
       {/* Section suivante de la page (après le fondu) */}
-      <div className="px-18 py-20 flex">
-        <div className="w-1/2">
+      <div className="px-18 py-20 flex flex-col sm:flex-row">
+        <div className="w-full sm:w-1/2">
           <h2 className={`${canela.className} text-[#24284D] text-5xl`}>
             Join the W Project
           </h2>
@@ -88,7 +87,7 @@ export default function Page() {
             <Button>Start To Create</Button>
           </div>
         </div>
-        <div className="w-1/2 flex justify-center pt-10">
+        <div className="w-full sm:w-1/2 flex justify-center pt-10">
           <Image
             src="/images/join.jpg"
             alt="Join"
@@ -99,18 +98,6 @@ export default function Page() {
             className="rounded-[34px]"
           />
         </div>
-
-
-        {/* <div className="mt-10 space-y-4 max-w-3xl mx-auto">
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className="bg-gray-100 p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Section de contenu {i + 1}</h3>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          ))}
-        </div> */}
       </div>
 
       <section className="px-18 py-20 bg-[#656BA8]">
