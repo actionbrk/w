@@ -1,24 +1,24 @@
-import Button from "../components/button";
-import StoryCard from "../components/story-card";
-import { canela } from "../fonts";
+import Button from "./components/button";
+import StoryCard from "./components/story-card";
+import { canela } from "./fonts";
 import { BsStar } from "react-icons/bs";
 import Image from "next/image";
+import { HeaderNavLink } from "./components/header/nav-link";
+import books from "../public/images/books.jpg";
+import { SearchBar } from "./components/search/search-bar";
 
 export default function Page() {
-  const imageUrl = "/images/books.jpg";
-  const navLinkClass = "hover:text-gray-300 transition duration-200 text-lg";
-
   return (
     <>
       {/* Conteneur principal avec le fond violet solide */}
       <div
         className="relative bg-no-repeat"
-        style={{ backgroundColor: '#24284D' }}
+        style={{ backgroundColor: "#24284D" }}
       >
         {/* Superposition pour l'image de fond avec transparence */}
-        <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0 opacity-25">
           <Image
-            src={imageUrl}
+            src={books}
             alt="Books background"
             layout="fill"
             objectFit="cover"
@@ -31,27 +31,34 @@ export default function Page() {
           {/* Menus de navigation (à gauche) */}
 
           <div className="flex space-x-8">
-            <a href="#" className={navLinkClass}>Home</a>
-            <a href="#" className={navLinkClass}>Library</a>
-            <a href="#" className={navLinkClass}>Concours</a>
-            <a href="#" className={navLinkClass}>About Us</a>
+            <HeaderNavLink href="/" activeClassName="border-b-3">
+              Home
+            </HeaderNavLink>
+            <HeaderNavLink href="/library">Library</HeaderNavLink>
+            <HeaderNavLink href="/competition">Concours</HeaderNavLink>
+            <HeaderNavLink href="/about">About Us</HeaderNavLink>
           </div>
 
           {/* Boutons (à droite) */}
           <div className="flex space-x-4">
             <Button>Write</Button>
-            <Button variant='secondary'>Log In</Button>
+            <Button variant="secondary">Log In</Button>
           </div>
         </nav>
 
-        <div className="relative flex flex-col items-start justify-center min-h-screen px-18">
-          <h1 className={`${canela.className} text-7xl sm:text-8xl font-bold text-white mb-8 p-2`}>
+        <section className="relative flex flex-col items-start justify-center min-h-screen px-18 gap-3">
+          <h1
+            className={`${canela.className} text-7xl sm:text-8xl font-bold text-white p-2`}
+          >
             The W Project
           </h1>
           <p className="text-sm font-light text-white max-w-2xl p-2">
-            Welcome to the W Project website. Writers: publish your work chapter by chapter and get paid! Readers: read all the originals and unpublished stories for free!
+            Welcome to the W Project website. Writers: publish your work chapter
+            by chapter and get paid! Readers: read all the originals and
+            unpublished stories for free!
           </p>
-        </div>
+          <SearchBar buttonVisible={false} />
+        </section>
 
         {/* Superposition pour l'effet de fondu en bas */}
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-lavender via-lavender/70 to-transparent">
@@ -79,9 +86,15 @@ export default function Page() {
             Join the W Project
           </h2>
           <p className="text-sm text-[#24284D] pt-10">
-            Would you like to publish a novel? A short story? A memoir? A poem? And get paid for your work?<br />
-            Do you want your readers to have access to your content without being deterred by the price of the book?<br />
-            The W Project is for you! With this website, you can publish your work online free of charge, so that it becomes public and your reputation earns you a profit.
+            Would you like to publish a novel? A short story? A memoir? A poem?
+            And get paid for your work?
+            <br />
+            Do you want your readers to have access to your content without
+            being deterred by the price of the book?
+            <br />
+            The W Project is for you! With this website, you can publish your
+            work online free of charge, so that it becomes public and your
+            reputation earns you a profit.
           </p>
           <div className="mt-10 flex justify-start">
             <Button>Start To Create</Button>
@@ -101,7 +114,9 @@ export default function Page() {
       </div>
 
       <section className="px-18 py-20 bg-[#656BA8]">
-          <h2 className={`${canela.className} text-white text-center text-5xl`}>How It Works</h2>
+        <h2 className={`${canela.className} text-white text-center text-5xl`}>
+          How It Works
+        </h2>
       </section>
     </>
   );
