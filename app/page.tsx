@@ -6,6 +6,7 @@ import Image from "next/image";
 import { HeaderNavLink } from "./components/header/nav-link";
 import books from "../public/images/books.jpg";
 import { SearchBar } from "./components/search/search-bar";
+import PricingCard from "./components/pricing";
 
 export default function Page() {
   return (
@@ -117,6 +118,34 @@ export default function Page() {
         <h2 className={`${canela.className} text-white text-center text-5xl`}>
           How It Works
         </h2>
+      </section>
+
+      <section className="px-18 py-20 bg-[#F5F6FA]">
+        <h2 className={`${canela.className} text-[#24284D] text-left text-5xl mb-12`}>
+          Prices
+        </h2>
+        <div className="flex flex-col sm:flex-row justify-center gap-8">
+          <PricingCard
+            title="Free"
+            price={0}
+            features={["Blabla", "Blabla", "Blabla", "Blabla", "Blabla"]}
+            buttonText="Get Started Free"
+          />
+          <PricingCard
+            title="Membership"
+            price={18}
+            features={["Blabla", "Blabla", "Blabla", "Blabla", "Blabla"]}
+            buttonText="Get Membership"
+            popular
+          />
+          <PricingCard
+            title="Premium"
+            price={25}
+            features={["Blabla", "Blabla", "Blabla", "Blabla", "Blabla"]}
+            buttonText="Get Membership"
+            dark
+          />
+        </div>
       </section>
     </>
   );

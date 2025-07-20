@@ -12,7 +12,7 @@ const Button = ({ children, onClick, variant = 'primary' }: ButtonProps) => {
   const baseClasses = `
     px-14 py-3 rounded-full 
     text-sm text-white text-center 
-    flex items-center justify-center
+    items-center justify-center
   `;
 
   const variantClasses = {
