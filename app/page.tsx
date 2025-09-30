@@ -21,9 +21,9 @@ export default function Page() {
           <Image
             src={books}
             alt="Books background"
-            layout="fill"
-            objectFit="cover"
+            fill
             priority
+            style={{ objectFit: "cover" }}
           />
         </div>
 
@@ -42,14 +42,14 @@ export default function Page() {
 
           {/* Boutons (à droite) */}
           <div className="flex space-x-4">
-            <Button>Write</Button>
+            <Button variant="primarylight">Write</Button>
             <Button variant="secondary">Log In</Button>
           </div>
         </nav>
 
         <section className="relative flex flex-col items-start justify-center min-h-screen px-18 gap-3">
           <h1
-            className={`${canela.className} text-7xl sm:text-8xl font-bold text-white p-2`}
+            className={`${canela.className} text-7xl sm:text-8xl text-white p-2`}
           >
             The W Project
           </h1>
@@ -107,7 +107,6 @@ export default function Page() {
             alt="Join"
             height={500}
             width={300}
-            objectFit="cover"
             priority
             className="rounded-[34px]"
           />
